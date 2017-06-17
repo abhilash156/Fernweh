@@ -34,7 +34,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE " + TABLE_USER + "(" +
-                USER_ID + " INTEGER PRIMARY KEY, " +
+                USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 USER_NAME + " TEXT, " +
                 USER_EMAIL + " TEXT, " +
                 USER_CONTACT + " TEXT, " +
