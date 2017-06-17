@@ -66,7 +66,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
-    public void removeRestaurant(int ID) {
+    public void removeUser(int ID) {
         SQLiteDatabase db = this.getWritableDatabase();
         String arg = String.valueOf(ID);
         String args[] = {arg};
@@ -83,11 +83,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(USER_NAME, user.getUserName());
         values.put(USER_EMAIL, user.getUserEmail());
         values.put(USER_CONTACT, user.getUserContact());
-        values.put(USER_CITY, user.getUserCity()); // Restaurant City
-        values.put(USER_BUDGET_MIN, user.getUserBudgetMin()); // Restaurant State
-        values.put(USER_BUDGET_MAX, user.getUserBudgetMax()); // Restaurant State
-        values.put(USER_BIO, user.getUserBio()); // Restaurant State
-        values.put(USER_INTERESTS, user.getUserInterests()); // Restaurant State
+        values.put(USER_CITY, user.getUserCity());
+        values.put(USER_BUDGET_MIN, user.getUserBudgetMin());
+        values.put(USER_BUDGET_MAX, user.getUserBudgetMax());
+        values.put(USER_BIO, user.getUserBio());
+        values.put(USER_INTERESTS, user.getUserInterests());
         // Inserting Row
         db.insert(TABLE_USER, null, values);
         //2nd argument is String containing nullColumnHack
